@@ -3,18 +3,17 @@ import './App.css';
 import axios from 'axios'
 import { response } from "msw"
 import { useState, useEffect } from 'react'
-
-import Characters from './components/Character'
-import CharactersDetails from './components/Character';
+import JediPowers from './components/CharacterDetails'
+import CharactersDetails from './components/Character'
 
 const App = () => {
 
-  const [character, setCharacters] = useState([])
+  const [characters, setCharacters] = useState([])
   const [currentId, setCurrentId] = useState(null)
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
-  const openDetails = id => {
+  const openDetails = characterId => {
     setCurrentId(id)
   }
 
@@ -43,7 +42,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">REACT WARS</h1>
-     
+     {characters.map(characterId => {
+       return <CharactersDetails key={characterId.id} info={characterId} action={openDetails} />
+     })}
     </div>
   )
 }
