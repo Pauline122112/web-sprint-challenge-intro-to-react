@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function Details(props) {
+export default function Characters(props) {
     const {proCharacter, close} = props
     const [details, setDetails] = useState(null);
     
@@ -24,7 +24,7 @@ export default function Details(props) {
     
     
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/people`)
+        axios.get(`https://swapi.dev/api/people/`)
         .then(res => {
             setDetails(res.data)
         })
@@ -34,4 +34,25 @@ export default function Details(props) {
     }, [proCharacter]);
     
     console.log('component Renders')
+
+    return(
+        <div>
+            <h3>Details of {details.name}</h3>
+            {
+                details &&
+                <>
+                <p>Gender: {details.gender}</p>
+                <p>Height: {details.height}</p>
+                <p>Mass: {details.mass}</p>
+                <p>BirthYear: {details.birth_year}</p>
+                <p>Eye Color: {details.eye_color}</p>
+                <p>Hair Color: {details.hair_color}</p>
+                <p>Skin Color: {details.skin_color}</p>
+                </>
+            }
+            <buttom onClick={close}>Close</buttom>
+
+        </div>
+    )
 }
+

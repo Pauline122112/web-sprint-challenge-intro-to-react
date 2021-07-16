@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
+import { response } from "msw"
 import { useState, useEffect } from 'react'
-import { API_KEY, BASE_URL } from './constants'
+
 import Characters from './components/Character'
+import CharactersDetails from './components/Character';
 
 const App = () => {
 
@@ -41,8 +43,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">REACT WARS</h1>
+     
     </div>
-  );
+  )
 }
 
 export default App;
