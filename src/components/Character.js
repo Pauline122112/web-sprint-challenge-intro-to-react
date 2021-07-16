@@ -9,7 +9,11 @@ margin-left: 1%;
 padding: 15px;
 font-weight: normal;
 opacity: 0.7;
-`
+&:hover{
+     transform: scale(1.1);
+     `
+
+
 
 
 export default function CharactersDetails({info, action}) {
