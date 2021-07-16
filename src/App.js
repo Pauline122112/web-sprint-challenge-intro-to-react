@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
-import { response } from "msw"
+// import { response } from "msw"
 import { useState, useEffect } from 'react'
 import JediPowers from './components/CharacterDetails'
 import CharactersDetails from './components/Character'
