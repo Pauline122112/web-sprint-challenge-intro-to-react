@@ -14,7 +14,7 @@ const App = () => {
   // the state properties here.
 
   const openDetails = characterId => {
-    setCurrentId(id)
+    setCurrentId(characterId)
   }
 
   const closeDetails = () => {
@@ -45,6 +45,7 @@ const App = () => {
      {characters.map(characterId => {
        return <CharactersDetails key={characterId.id} info={characterId} action={openDetails} />
      })}
+     {currentId && <JediPowers jediInfo={currentId} close={closeDetails}/>}
     </div>
   )
 }
