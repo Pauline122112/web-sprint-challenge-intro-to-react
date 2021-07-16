@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const JediMindTricks = styled.div`
+postition:fixed;
 color:black;
-display:block;
 background-color: lightgrey;
 opacity: 0.7;
 text-align:center;

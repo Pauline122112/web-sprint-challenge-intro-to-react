@@ -7,6 +7,7 @@ const StyledCharacter= styled.button`
 border-radius: 3px;
 border: 2px solid darkbrown;
 width: 15%;
+margin-top: 5%;
 margin-left: 1%;
 padding: 15px;
 font-weight: normal;
