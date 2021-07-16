@@ -10,10 +10,24 @@ text-align:center;
 margin:20%;
 align-items: center;
 border:3px solid lightgray;
-padding:0px 20px;
+padding:20px 20px;
 font-weight: bold;
 font-size: 20px;
 `
+
+const Jabba = styled.button`
+border-radius: 3px;
+border: 2px solid darkbrown;
+width: 40%;
+margin-left: 1%;
+padding: 15px;
+font-weight: normal;
+opacity: 0.7;
+&:hover{
+transform: scale(1.1);
+}
+`
+
 
 export default function JediPowers(props) {
     const { jediInfo, close } = props
@@ -27,7 +41,7 @@ export default function JediPowers(props) {
                 <p>Eye Color: {jediInfo.eye_color}</p>
                 <p>Hair Color: {jediInfo.hair_color}</p>
                 <p>Skin Color: {jediInfo.skin_color}</p>
-            <button onClick={close}>Close</button>
+            <Jabba onClick={close}>Close</Jabba>
         </JediMindTricks>
         )
 
